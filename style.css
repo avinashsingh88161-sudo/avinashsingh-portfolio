@@ -266,7 +266,7 @@ p {
   background-color: #1e1e1e;
   border: 1px solid #3a3a3a;
   border-radius: 12px;
-  padding: 20px;
+  padding: 12px;
   margin-bottom: 20px;
   transition:
     transform 0.3s ease,
@@ -279,7 +279,7 @@ p {
 }
 .project-item img {
   width: 100%; /* card ke andar fit ho jaaye */
-  height: 180px; /* uniform height for all projects */
+  height: 140px; /* uniform height for all projects */
   object-fit: cover; /* image crop karke distortion avoid kare */
   border-radius: 10px;
 }
@@ -295,20 +295,23 @@ p {
 }
 .card p {
   color: #a0a0a0;
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.85rem;
+  line-height: 1.4;
   text-align: start;
   margin: 0;
   margin-top: 6px;
+  overflow: hidden;
 }
 .card span {
   display: inline-block;
   margin-top: 10px;
   color: #ffbf00;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   text-decoration: none;
-  padding: 6px;
+  padding: 4px 8px;
+  background-color: #333;
+  border-radius: 5px;
 }
 
 /* resume dawnload button*/
@@ -396,4 +399,19 @@ p {
   border-top: 1px solid #3a3a3a;
   background-color: #1e1e1e;
   color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+  .project-item img {
+    height: 120px;
+  }
+  .card h3 {
+    font-size: 1rem;
+  }
+  .card p {
+    font-size: 0.8rem;
+  }
 }
